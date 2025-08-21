@@ -1,4 +1,5 @@
 using System.Net.WebSockets;
+using Microsoft.AspNetCore.HttpOverrides;
 using OpenNotification_API.Models;
 using OpenNotification_API.Services;
 
@@ -9,17 +10,40 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<NotificationWebSocketManager>();
 
+// Configure forwarded headers for production deployment behind reverse proxy
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+    options.KnownNetworks.Clear();
+    options.KnownProxies.Clear();
+});
+
 // Configure Kestrel to listen on HTTP and HTTPS
 builder.WebHost.ConfigureKestrel(options =>
 {
-    // HTTPS (default)
-    options.ListenLocalhost(7129, listenOptions =>
+    if (builder.Environment.IsDevelopment())
     {
-        listenOptions.UseHttps(); // Dev certificate
-    });
-
-    // HTTP for local testing
-    options.ListenLocalhost(5193); // No HTTPS, plain HTTP
+        // Development: HTTP for local testing
+        options.ListenLocalhost(5193); // No HTTPS, plain HTTP
+        // Optionally enable HTTPS for development
+        // options.ListenLocalhost(7129, listenOptions =>
+        // {
+        //     listenOptions.UseHttps(); // Dev certificate
+        // });
+    }
+    else
+    {
+        // Production: Listen on all interfaces for Cloudflare tunnel
+        var port = Environment.GetEnvironmentVariable("PORT");
+        if (int.TryParse(port, out var portNumber))
+        {
+            options.ListenAnyIP(portNumber);
+        }
+        else
+        {
+            options.ListenAnyIP(8080); // Default port for production
+        }
+    }
 });
 
 var app = builder.Build();
@@ -29,9 +53,15 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseHttpsRedirection();
+}
+else
+{
+    // In production with Cloudflare tunnel, don't redirect to HTTPS
+    // Cloudflare handles HTTPS termination
+    app.UseForwardedHeaders();
 }
 
-app.UseHttpsRedirection();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 app.UseWebSockets();

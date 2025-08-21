@@ -177,7 +177,17 @@
     </div>
 
     <script>
-        const API_BASE = 'https://localhost:7129';
+        // Dynamically determine API base URL based on current host
+        const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+            ? 'https://localhost:7129' 
+            : `${window.location.protocol}//${window.location.host}`;
+        
+        // Determine WebSocket protocol and base URL
+        const WS_PROTOCOL = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+        const WS_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+            ? 'wss://localhost:7129'
+            : `${WS_PROTOCOL}//${window.location.host}`;
+        
         let socket = null;
         
         // Log function
@@ -187,6 +197,10 @@
             logs.textContent += `[${timestamp}] ${message}\n`;
             logs.scrollTop = logs.scrollHeight;
         }
+        
+        // Log the current configuration
+        log(`API Base: ${API_BASE}`);
+        log(`WebSocket Base: ${WS_BASE}`);
         
         // Generate GUID
         function generateGuid() {
@@ -244,7 +258,7 @@
             }
             
             try {
-                const wsUrl = `wss://localhost:7129/ws/${guid}`;
+                const wsUrl = `${WS_BASE}/ws/${guid}`;
                 log(`Connecting to WebSocket: ${wsUrl}`);
                 
                 socket = new WebSocket(wsUrl);

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "ManifestType": "Publish",
+  "ManifestType": "Build",
   "Endpoints": [
     {
       "Route": "index.html",
