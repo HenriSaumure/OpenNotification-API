@@ -11,14 +11,14 @@ public class NotificationWebSocketManager
     // Dictionary: GUID -> List of WebSocket connections for that GUID
     private readonly ConcurrentDictionary<string, ConcurrentDictionary<string, WebSocket>> _guidConnections = new();
 
-    public async Task AddConnectionAsync(string guid, string connectionId, WebSocket webSocket)
+    public void AddConnection(string guid, string connectionId, WebSocket webSocket)
     {
         var connections = _guidConnections.GetOrAdd(guid, _ => new ConcurrentDictionary<string, WebSocket>());
         connections.TryAdd(connectionId, webSocket);
         Console.WriteLine($"WebSocket connection added for GUID {guid}: {connectionId}");
     }
 
-    public async Task RemoveConnectionAsync(string guid, string connectionId)
+    public void RemoveConnection(string guid, string connectionId)
     {
         if (_guidConnections.TryGetValue(guid, out var connections))
         {

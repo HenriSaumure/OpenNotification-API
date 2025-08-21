@@ -5,7 +5,8 @@ using OpenNotification_API.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services
-builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<NotificationWebSocketManager>();
 
 // Configure Kestrel to listen on HTTP and HTTPS
@@ -26,7 +27,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
@@ -49,7 +51,7 @@ app.Map("/ws/{guid}", async (string guid, HttpContext context, NotificationWebSo
         var webSocket = await context.WebSockets.AcceptWebSocketAsync();
         var connectionId = Guid.NewGuid().ToString();
         
-        await wsManager.AddConnectionAsync(guid, connectionId, webSocket);
+        wsManager.AddConnection(guid, connectionId, webSocket);
         
         try
         {
@@ -65,7 +67,7 @@ app.Map("/ws/{guid}", async (string guid, HttpContext context, NotificationWebSo
         }
         finally
         {
-            await wsManager.RemoveConnectionAsync(guid, connectionId);
+            wsManager.RemoveConnection(guid, connectionId);
         }
     }
     else

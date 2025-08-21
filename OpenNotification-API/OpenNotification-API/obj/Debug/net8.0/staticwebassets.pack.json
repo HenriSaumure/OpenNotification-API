@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.OpenNotification-API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.OpenNotification-API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.OpenNotification-API.props",
+      "PackagePath": "build\\OpenNotification-API.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.OpenNotification-API.props",
+      "PackagePath": "buildMultiTargeting\\OpenNotification-API.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.OpenNotification-API.props",
+      "PackagePath": "buildTransitive\\OpenNotification-API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
