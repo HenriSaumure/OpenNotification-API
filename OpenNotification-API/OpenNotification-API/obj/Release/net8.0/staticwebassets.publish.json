@@ -1,125 +1,12 @@
 {
   "Version": 1,
-  "Hash": "JkxJP2Brls18PW8Saar8seJSpw0XZXG5vokQOciaLs8=",
+  "Hash": "hGddl20MPVjy/vRPnL8uBQrVEu+ujyKFGIT7+PXRLB8=",
   "Source": "OpenNotification-API",
   "BasePath": "_content/OpenNotification-API",
   "Mode": "Default",
   "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [
-    {
-      "Name": "OpenNotification-API/wwwroot",
-      "Source": "OpenNotification-API",
-      "ContentRoot": "/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/wwwroot/",
-      "BasePath": "_content/OpenNotification-API",
-      "Pattern": "**"
-    }
-  ],
-  "Assets": [
-    {
-      "Identity": "/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/wwwroot/index.html",
-      "SourceId": "OpenNotification-API",
-      "SourceType": "Discovered",
-      "ContentRoot": "/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/wwwroot/",
-      "BasePath": "_content/OpenNotification-API",
-      "RelativePath": "index#[.{fingerprint}]?.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "l358onqcs8",
-      "Integrity": "L8AfBd9/m2X+o6Et2hMd5eDsGEK4ljXeLFIDmBJ2LMs=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/index.html"
-    }
-  ],
-  "Endpoints": [
-    {
-      "Route": "index.html",
-      "AssetFile": "/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/wwwroot/index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12927"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"L8AfBd9/m2X+o6Et2hMd5eDsGEK4ljXeLFIDmBJ2LMs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 21 Aug 2025 06:39:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-L8AfBd9/m2X+o6Et2hMd5eDsGEK4ljXeLFIDmBJ2LMs="
-        }
-      ]
-    },
-    {
-      "Route": "index.l358onqcs8.html",
-      "AssetFile": "/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/wwwroot/index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12927"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"L8AfBd9/m2X+o6Et2hMd5eDsGEK4ljXeLFIDmBJ2LMs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 21 Aug 2025 06:39:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "l358onqcs8"
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-L8AfBd9/m2X+o6Et2hMd5eDsGEK4ljXeLFIDmBJ2LMs="
-        }
-      ]
-    }
-  ]
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
 }
