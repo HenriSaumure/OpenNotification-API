@@ -68,6 +68,8 @@ POST /notification
   "title": "string (required)",
   "description": "string (optional)",
   "pictureLink": "string (optional)",
+  "icon": "string (optional)",
+  "actionLink": "string (optional)",
   "isAlert": "bool (optional, false)"
 }
 ```
@@ -83,10 +85,11 @@ Content-Type: application/json
   "guid": "123e4567-e89b-12d3-a456-426614174000",
   "title": "New Update",
   "description": "Version 2.0 is now available.",
-  "pictureLink": "https://example.com/icon.png",
+  "pictureLink": "https://example.com/banner.png",
+  "icon": "https://example.com/icon.png",
+  "actionLink": "https://example.com/update/2.0",
   "isAlert": true
 }
-
 ```
 
 **Success Response (200 OK):**
@@ -96,8 +99,11 @@ Content-Type: application/json
   "guid": "123e4567-e89b-12d3-a456-426614174000",
   "title": "New Update",
   "description": "Version 2.0 is now available.",
-  "pictureLink": "https://example.com/icon.png",
+  "pictureLink": "https://example.com/banner.png",
+  "icon": "https://example.com/icon.png",
+  "actionLink": "https://example.com/update/2.0",
   "isAlert": true
+}
 ```
 
 

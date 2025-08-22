@@ -5,14 +5,19 @@ public record Notification(
     string Title,
     string? Description = null,
     string? PictureLink = null,
+    string? Icon = null,
+    string? ActionLink = null,
     bool IsAlert = false
 );
+
 
 public record NotificationRequest(
     Guid Guid,
     string Title,
     string? Description = null,
     string? PictureLink = null,
+    string? Icon = null,
+    string? ActionLink = null,
     bool IsAlert = false
 )
 {
@@ -21,6 +26,8 @@ public record NotificationRequest(
         Title,
         Description,
         PictureLink,
+        Icon,
+        ActionLink,
         IsAlert
     );
 }
