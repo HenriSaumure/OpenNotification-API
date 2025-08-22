@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "O9z6yj4UenW2noxVnkZNyizFW+ItqFx7Oi6lZ+rZU4s=",
+  "Hash": "z7dXk+ENJycgJKUX58AfpQR0rsUtLAnc7+z4zg8gYuQ=",
   "Source": "OpenNotification-API",
   "BasePath": "_content/OpenNotification-API",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7dagmvoo1g",
-      "Integrity": "hTWGTs92GruK/KrP4appCzZ6ebMc9pwxThjInAF2OzE=",
+      "Fingerprint": "airdjd0hr1",
+      "Integrity": "fqzjGgRUQM2RW8wU2PxQra4wFuyZYfIkfOEnWSL3iDg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/index.html"
@@ -40,7 +40,7 @@
   ],
   "Endpoints": [
     {
-      "Route": "index.7dagmvoo1g.html",
+      "Route": "index.airdjd0hr1.html",
       "AssetFile": "/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/wwwroot/index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -50,7 +50,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12210"
+          "Value": "12256"
         },
         {
           "Name": "Content-Type",
@@ -58,11 +58,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hTWGTs92GruK/KrP4appCzZ6ebMc9pwxThjInAF2OzE=\""
+          "Value": "\"fqzjGgRUQM2RW8wU2PxQra4wFuyZYfIkfOEnWSL3iDg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 20 Aug 2025 19:01:46 GMT"
+          "Value": "Fri, 22 Aug 2025 19:58:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -72,7 +72,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "7dagmvoo1g"
+          "Value": "airdjd0hr1"
         },
         {
           "Name": "label",
@@ -80,7 +80,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hTWGTs92GruK/KrP4appCzZ6ebMc9pwxThjInAF2OzE="
+          "Value": "sha256-fqzjGgRUQM2RW8wU2PxQra4wFuyZYfIkfOEnWSL3iDg="
         }
       ]
     },
@@ -95,7 +95,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12210"
+          "Value": "12256"
         },
         {
           "Name": "Content-Type",
@@ -103,11 +103,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hTWGTs92GruK/KrP4appCzZ6ebMc9pwxThjInAF2OzE=\""
+          "Value": "\"fqzjGgRUQM2RW8wU2PxQra4wFuyZYfIkfOEnWSL3iDg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 20 Aug 2025 19:01:46 GMT"
+          "Value": "Fri, 22 Aug 2025 19:58:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -117,7 +117,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hTWGTs92GruK/KrP4appCzZ6ebMc9pwxThjInAF2OzE="
+          "Value": "sha256-fqzjGgRUQM2RW8wU2PxQra4wFuyZYfIkfOEnWSL3iDg="
         }
       ]
     }

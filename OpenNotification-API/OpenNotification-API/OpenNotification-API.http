@@ -22,17 +22,3 @@ Content-Type: application/json
   "guid": "123e4567-e89b-12d3-a456-426614174000",
   "title": "Simple Notification"
 }
-
-###
-
-# Check overall server status
-GET {{OpenNotification_API_HostAddress}}/status
-Accept: application/json
-
-###
-
-# Check status for specific GUID
-GET {{OpenNotification_API_HostAddress}}/status/550e8400-e29b-41d4-a716-446655440000
-Accept: application/json
-
-###

@@ -8,14 +8,12 @@ namespace OpenNotification_API.Services;
 
 public class NotificationWebSocketManager
 {
-    // Dictionary: GUID -> List of WebSocket connections for that GUID
     private readonly ConcurrentDictionary<string, ConcurrentDictionary<string, WebSocket>> _guidConnections = new();
 
     public void AddConnection(string guid, string connectionId, WebSocket webSocket)
     {
         var connections = _guidConnections.GetOrAdd(guid, _ => new ConcurrentDictionary<string, WebSocket>());
         connections.TryAdd(connectionId, webSocket);
-        Console.WriteLine($"WebSocket connection added for GUID {guid}: {connectionId}");
     }
 
     public void RemoveConnection(string guid, string connectionId)
@@ -24,13 +22,11 @@ public class NotificationWebSocketManager
         {
             connections.TryRemove(connectionId, out _);
             
-            // Remove GUID entry if no more connections
             if (connections.IsEmpty)
             {
                 _guidConnections.TryRemove(guid, out _);
             }
         }
-        Console.WriteLine($"WebSocket connection removed for GUID {guid}: {connectionId}");
     }
 
     public async Task SendNotificationToGuidAsync(Notification notification)
@@ -38,10 +34,7 @@ public class NotificationWebSocketManager
         var guidString = notification.Guid.ToString();
         
         if (!_guidConnections.TryGetValue(guidString, out var connections))
-        {
-            Console.WriteLine($"No clients connected for GUID: {guidString}");
             return;
-        }
 
         var message = JsonSerializer.Serialize(notification);
         var buffer = Encoding.UTF8.GetBytes(message);
@@ -57,19 +50,16 @@ public class NotificationWebSocketManager
             }
             else
             {
-                // Mark closed connections for removal
                 connectionsToRemove.Add(connection.Key);
             }
         }
 
-        // Remove closed connections
         foreach (var connectionId in connectionsToRemove)
         {
             connections.TryRemove(connectionId, out _);
         }
 
         await Task.WhenAll(tasks);
-        Console.WriteLine($"Notification sent to {tasks.Count} clients for GUID: {guidString}");
     }
 
     private async Task SendMessageAsync(WebSocket webSocket, byte[] buffer)
@@ -87,12 +77,4 @@ public class NotificationWebSocketManager
             Console.WriteLine($"Error sending message: {ex.Message}");
         }
     }
-
-    public int GetTotalConnectionCount() => _guidConnections.Values.Sum(connections => connections.Count);
-    
-    public int GetConnectionCountForGuid(string guid) => 
-        _guidConnections.TryGetValue(guid, out var connections) ? connections.Count : 0;
-
-    public Dictionary<string, int> GetAllGuidConnections() =>
-        _guidConnections.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.Count);
 }

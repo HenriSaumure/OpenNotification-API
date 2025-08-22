@@ -66,8 +66,9 @@ POST /notification
 {
   "guid": "string (required)",
   "title": "string (required)",
-  "message": "string (optional)",
-  "icon": "string (optional, base64)"
+  "description": "string (optional)",
+  "pictureLink": "string (optional)",
+  "isAlert": "bool (optional, false)"
 }
 ```
 
@@ -81,67 +82,22 @@ Content-Type: application/json
 {
   "guid": "123e4567-e89b-12d3-a456-426614174000",
   "title": "New Update",
-  "message": "Version 2.0 is now available."
+  "description": "Version 2.0 is now available.",
+  "pictureLink": "https://example.com/icon.png",
+  "isAlert": true
 }
+
 ```
 
 **Success Response (200 OK):**
 
 ```json
 {
-    "guid": "123e4567-e89b-12d3-a456-426614174000",
-    "title": "New Update",
-    "message": "Version 2.0 is now available.",
-    "icon": null,
-    "timestamp": "2023-10-27T10:00:00Z"
-}
+  "guid": "123e4567-e89b-12d3-a456-426614174000",
+  "title": "New Update",
+  "description": "Version 2.0 is now available.",
+  "pictureLink": "https://example.com/icon.png",
+  "isAlert": true
 ```
 
-### 3. Health Checks
 
-The API provides endpoints to monitor the status of WebSocket connections.
-
-#### Get Overall Status
-
-Returns the total number of connected clients and a breakdown by GUID.
-
-**Endpoint:**
-
-```
-GET /status
-```
-
-**Success Response (200 OK):**
-
-```json
-{
-    "totalConnectedClients": 5,
-    "guidConnections": {
-        "123e4567-e89b-12d3-a456-426614174000": 2,
-        "another-guid-value-....": 3
-    }
-}
-```
-
-#### Get Status for a Specific GUID
-
-Returns the number of clients connected for a specific GUID.
-
-**Endpoint:**
-
-```
-GET /status/{guid}
-```
-
-**URL Parameter:**
-
-* `guid` (string, required): The GUID of the channel to check.
-
-**Success Response (200 OK):**
-
-```json
-{
-    "guid": "123e4567-e89b-12d3-a456-426614174000",
-    "connectedClients": 2
-}
-```
