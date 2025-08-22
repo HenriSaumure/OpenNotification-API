@@ -1,0 +1,7 @@
+/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/bin/Release/net8.0/publish/OpenNotification-API
+/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/bin/Release/net8.0/publish/appsettings.Development.json
+/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/bin/Release/net8.0/publish/appsettings.json
+/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/bin/Release/net8.0/publish/OpenNotification-API.dll
+/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/bin/Release/net8.0/publish/OpenNotification-API.deps.json
+/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/bin/Release/net8.0/publish/OpenNotification-API.runtimeconfig.json
+/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/bin/Release/net8.0/publish/OpenNotification-API.pdb
