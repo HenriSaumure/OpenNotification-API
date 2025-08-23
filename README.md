@@ -1,6 +1,6 @@
 # OpenNotification-API
 
-Try it at: [https://api.opennotification.org](https://api.opennotification.org)
+Try it with: [https://api.opennotification.org](https://api.opennotification.org) for free!
 
 A simple real-time notification service built with ASP.NET Core and WebSockets. It allows clients to subscribe to a specific channel using a GUID and receive notifications sent to that channel.
 
