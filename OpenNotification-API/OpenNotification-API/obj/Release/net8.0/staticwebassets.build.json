@@ -1,12 +1,20 @@
 {
   "Version": 1,
-  "Hash": "zbhuqG/yRi0R0yPtGEviDHsdCdsNLHAFM3gCJKnxVQk=",
+  "Hash": "1A5PZ0skrge44i+frbJLfbacdCUUX/IiNDWkaTO80Hs=",
   "Source": "OpenNotification-API",
   "BasePath": "_content/OpenNotification-API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "OpenNotification-API/wwwroot",
+      "Source": "OpenNotification-API",
+      "ContentRoot": "/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/wwwroot/",
+      "BasePath": "_content/OpenNotification-API",
+      "Pattern": "**"
+    }
+  ],
   "Assets": [],
   "Endpoints": []
 }
