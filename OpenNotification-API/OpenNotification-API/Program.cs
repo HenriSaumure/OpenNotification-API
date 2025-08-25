@@ -4,10 +4,25 @@ using OpenNotification_API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add CORS services
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.WithOrigins("https://saumure.com", "https://opennotification.org")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
+
 // Add only essential services
 builder.Services.AddSingleton<NotificationWebSocketManager>();
 
 var app = builder.Build();
+
+// Use CORS
+app.UseCors();
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
@@ -66,6 +81,21 @@ app.MapPost("/notification", async (NotificationRequest request, NotificationWeb
     var notification = request.ToNotification();
     await wsManager.SendNotificationToGuidAsync(notification);
     return Results.Ok(notification);
+});
+
+// WebSocket endpoint for notification count: /ws/count
+app.Map("/ws/count", async (HttpContext context, NotificationWebSocketManager wsManager) =>
+{
+    if (context.WebSockets.IsWebSocketRequest)
+    {
+        var webSocket = await context.WebSockets.AcceptWebSocketAsync();
+        await wsManager.HandleCountWebSocketAsync(webSocket);
+    }
+    else
+    {
+        context.Response.StatusCode = 400;
+        await context.Response.WriteAsync("WebSocket connection required");
+    }
 });
 
 app.Run();

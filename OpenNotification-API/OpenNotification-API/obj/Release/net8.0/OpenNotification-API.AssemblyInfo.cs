@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OpenNotification-API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce07f2249da18dfabf3d78f83a1fdc98d77fe852")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50a265b26728e29960b1efa1fa9a8cc8c1b81dc0")]
 [assembly: System.Reflection.AssemblyProductAttribute("OpenNotification-API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OpenNotification-API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
