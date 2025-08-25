@@ -1,9 +1,7 @@
-/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/OpenNotification-API.csproj.AssemblyReference.cache
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/OpenNotification-API.GeneratedMSBuildEditorConfig.editorconfig
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/OpenNotification-API.AssemblyInfoInputs.cache
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/OpenNotification-API.AssemblyInfo.cs
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/OpenNotification-API.csproj.CoreCompileInputs.cache
-/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/OpenNotification-API.MvcApplicationPartsAssemblyInfo.cs
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/OpenNotification-API.MvcApplicationPartsAssemblyInfo.cache
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/OpenNotification-API.sourcelink.json
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/bin/Debug/net8.0/appsettings.Development.json
@@ -15,10 +13,6 @@
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/bin/Debug/net8.0/OpenNotification-API.runtimeconfig.json
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/bin/Debug/net8.0/OpenNotification-API.dll
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/bin/Debug/net8.0/OpenNotification-API.pdb
-/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/bin/Debug/net8.0/Microsoft.OpenApi.dll
-/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
-/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
-/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/scopedcss/bundle/OpenNotification-API.styles.css
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/staticwebassets.build.json
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/staticwebassets.development.json
@@ -29,7 +23,6 @@
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.OpenNotification-API.props
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.OpenNotification-API.props
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/staticwebassets.pack.json
-/home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/OpenNoti.A0E730F4.Up2Date
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/OpenNotification-API.dll
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/refint/OpenNotification-API.dll
 /home/margot/Documents/GitHub/OpenNotification-API/OpenNotification-API/OpenNotification-API/obj/Debug/net8.0/OpenNotification-API.pdb
